@@ -30,3 +30,5 @@ for src in "${!fetchMe[@]}"; do
   echo "Fetching $src -> $dst"
   wget "$1/$src" -O "$output/data/$dst"
 done
+# Copy mustache files:
+cp -rv $dir/output/static/mustache/* $dir/output/data
